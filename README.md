@@ -68,6 +68,11 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 <!--
 - create a paddle sandbox account
 - define products with fixed price in your paddle sandbox
+  - product and pricing
+  - billing plans
+
+- billable class to user model
+- api keys
 - configure paddle webhook handling
 
 - Quick selling with Paddle and Cashier
