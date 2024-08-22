@@ -78,9 +78,14 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 - Quick selling with Paddle and Cashier
 - selling subscriptions
   - create products as subscriptions
+  - api keys
+  - default payment link
   - checkout button to checkout a particular product
   - webhook to check if the subscription has actually started
+    - add webhook urls in notification
   - restrict access of some sections of application to only subscribed users
+    - $user->subscribed()
+    - middleware for subscriptions
   - subscription middleware
   - allow customers to manage their billing plan
   - cancel subscription

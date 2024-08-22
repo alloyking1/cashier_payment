@@ -10,6 +10,30 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-6 text-gray-900">
                     {{ __("You're logged in!") }}
+
+
+
+              {{-- <!DOCTYPE html>
+              <html>
+              <head>
+              <title>Time Clock Attendance Hours Tracking</title>
+              </head>
+              <body>
+              <style>
+              #my-iframe {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                border: none;
+              }
+              </style> --}}
+              <iframe id='my-iframe' 
+              src='https://www.timeclockfree.com/app.html?page=company&companyname=your-company-name' 
+              allow='geolocation; camera'></iframe>
+              {{-- </body>
+              </html> --}}
                 </div>
             </div>
         </div>
