@@ -43,4 +43,20 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    /**
+     * Get the customer's name to associate with Paddle.
+     */
+    public function paddleName(): string|null
+    {
+        return $this->name;
+    }
+    
+    /**
+     * Get the customer's email address to associate with Paddle.
+     */
+    public function paddleEmail(): string|null
+    {
+        return $this->email;
+    }
 }

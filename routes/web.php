@@ -3,7 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\SubscriptionController;
-use App\Http\Controllers\JobController;
+use App\Http\Controllers\TimeTrackerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -24,8 +24,10 @@ Route::get('/', function () {
 Route::get('/dashboard', DashboardController::class)->middleware(['auth', 'verified'])->name('dashboard');
 Route::get('/subscribe', [SubscriptionController::class, 'index'])->middleware(['auth', 'verified'])->name('subscribe');
 
-Route::prefix('/job')->group(function(){
-    Route::get('/create', [JobController::class, 'index'])->name('jobs.create');
+Route::prefix('/time')->group(function(){
+    // Route::get('/', [TimeTrackerController::class, 'index']);
+    Route::post('/start', [TimeTrackerController::class, 'start'])->name('time-tracker.start');
+    Route::post('/stop/{entry}', [TimeTrackerController::class, 'stop'])->name('time-tracker.stop');
 });
 
 Route::middleware('auth')->group(function () {
